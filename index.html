@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <header>
+    <img src="./images/logo.svg">
+  </header>
+  <div class="container">
+    <div class="left">
+      <div class="cost">
+        <div class="title">Bill</div>
+        <input type="text" oninput="add_number()" class="input dollar" placeholder="0">
+      </div>
+      <div class="percent">
+        <div class="title">Select Tip %</div>
+        <div class="btns">
+          <button class="tip tip5">5%</button>
+          <button class="tip tip10">10%</button>
+          <button class="tip tip15">15%</button>
+          <button class="tip tip25">25%</button>
+          <button class="tip tip50">50%</button>
+          <input type="text" class="custom" oninput="add_number()" placeholder="Custom">
+        </div>
+      </div>
+      <div class="number_people">
+        <div class="title_people">
+          <p>Number of People</p>
+          <p class="alert">Can't be zero</p>
+        </div>
+        <input type="text" oninput="add_number()" placeholder="0" class="input person">
+      </div>
+    </div>
+    <div class="right">
+      <div class="result">
+        <div class="amount">
+          <div class="text">
+            <h4>Tip Amount</h4>
+            <span>/ person</span>
+          </div>
+          <div class="amount_result">
+            <h2 class="h2_amount">$0.00</h2>
+          </div>
+        </div>
+        <div class="total">
+          <div class="text">
+            <h4>Total</h4>
+            <span>/ person</span>
+          </div>
+          <div class="total_result">
+            <h2 class="h2_total">$0.00</h2>
+          </div>
+        </div>
+      </div>
+      <div class="reset">
+        <button class="btn_reset">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

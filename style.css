@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c5e4e7;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-row-gap: 20px;
+}
+
+.percent,
+.cost,
+.number_people {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 15px;
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.result {
+    display: grid;
+    grid-row-gap: 15px;
+}
+
+.title_people {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    font-weight: bold;
+    color: hsl(183, 100%, 15%);
+    background-color: #f3f8fb;
+    padding: 5px;
+    border-style: none;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 20px;
+    outline-color: green;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+    justify-content: center;
+}
+
+.tip {
+    border-style: none;
+    padding: 10px;
+    color: white;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.tip:focus{
+    background-color: hsl(172, 67%, 45%); color: black;
+}
+
+button:hover{
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.custom {
+    border-radius: 5px;
+    border-style: none;
+    text-align: center;
+    color: hsl(183, 100%, 15%);
+    background-color: #f3f8fb;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 16px;
+    outline-color: green;
+}
+
+.dollar {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+.person {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.total,
+.amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_reset {
+    width: 100%;
+    background-color: hsl(172, 67%, 45%);
+    padding: 6px;
+    border-radius: 5px;
+    border-style: none;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+span {
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+}
+
+h2 {
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+}
+
+h4 {
+    color: white;
+}
+
+.alert{
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
+    color: orange;
+}
+
+.fail{
+    outline-color: orange;
+}
+
+.btn_reset:disabled
+{
+    background: linear-gradient(rgba(197, 228, 231, 0.2), rgba(197, 228, 231, 0.2)), linear-gradient(#00494d, #00494d);
+}
+
+@media screen and (min-width: 668px) {
+
+    .container {
+        background-color: white;
+        border-radius: 10px;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: auto;
+        grid-column-gap: 3rem;
+    }
+
+    .input {
+        font-weight: bold;
+        color: hsl(183, 100%, 15%);
+        background-color: #f3f8fb;
+        padding: 7px;
+        border-style: none;
+        border-radius: 5px;
+        text-align: right;
+        font-size: 25px;
+    }
+
+    .right {
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 15px;
+        padding: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-row-gap: 0px;
+    }
+
+    .btns {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 15px;
+        justify-content: center;
+    }
+
+    h2 {
+        color: hsl(172, 67%, 45%);
+        font-size: 35px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .result {
+        display: grid;
+        grid-row-gap: 2rem;
+        margin-top: 1rem;
+    }
+
+    .btn_reset {
+        width: 100%;
+        background-color: hsl(172, 67%, 45%);
+        padding: 8px;
+        border-radius: 5px;
+        border-style: none;
+        text-transform: uppercase;
+        color: hsl(183, 100%, 15%);
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
